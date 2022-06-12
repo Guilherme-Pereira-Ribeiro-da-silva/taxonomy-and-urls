@@ -1,0 +1,19 @@
+{
+    "name": "guilherme-pereira-ribeiro-da-silva/taxonomy-and-urls",
+    "description": "Worspress plugin allowing the user to create custom taxonomies and and urls to their pages",
+    "type": "project",
+    "license": "http://opensource.org/licenses/gpl-license.php GNU Public License",
+    "autoload": {
+        "psr-4": {
+            "GuilhermePereiraRibeiroDaSilva\\TaxonomyAndUrls\\": "src/",
+            "Loader\\": "loaders/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Guilherme Pereira",
+            "email": "guinovembro43@gmail.com"
+        }
+    ],
+    "require": {}
+}
