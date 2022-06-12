@@ -17,7 +17,7 @@ instalar o plugin:
 Após haver cumprido os requerimentos, vá até a pasta de plugins
 da sua aplicação wordpress e execute o comando:
 
-	git clone https://github.com/Jasonnor/README.md.git
+	git clone https://github.com/Guilherme-Pereira-Ribeiro-da-silva/taxonomy-and-urls.git
 
 ## Como o projeto foi organizado
 O projeto foi desenvolvido utilizando o padrão MVC, possuíndo
