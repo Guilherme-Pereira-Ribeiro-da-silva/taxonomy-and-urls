@@ -45,7 +45,7 @@ a seguinte estrutura de pastas:
 ## Modelagem do banco de dados
 Basicamente o plugin cria duas tabelas (taxonomias e urls).
 
-![diagrama-do-banco-de-dados](https://github.com/Guilherme-Pereira-Ribeiro-da-silva/taxonomy-and-urls/app/public/modelo-relacional.png)
+![diagrama-do-banco-de-dados](https://github.com/Guilherme-Pereira-Ribeiro-da-silva/taxonomy-and-urls/blob/main/app/public/modelo-relacional.png)
 
 A tabela de taxonomias é responsável por guardar as informações
 das taxonomias para que estas possam ser carregadas.
