@@ -59,7 +59,7 @@ e com o sufixo noticias, será gerado na url: https://dominio/sao-paulo/noticias
 ## Diagramas
 
 ### Diagrama de classes
-![diagrama-de-classes](https://github.com/Guilherme-Pereira-Ribeiro-da-silva/taxonomy-and-urls/blob/main/diagramas/diagrama_de_classes.png)
+![diagrama-de-classes](https://github.com/Guilherme-Pereira-Ribeiro-da-silva/taxonomy-and-urls/blob/main/diagrams/diagrama_de_classes.png)
 
 O diagrama de classes acima especifíca as classes criadas 
 durante o projeto. De um lado temos os loaders das taxonomias e das urls, 
