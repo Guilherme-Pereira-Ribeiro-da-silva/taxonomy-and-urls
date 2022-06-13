@@ -5,7 +5,7 @@ e definir as urls para os posts que as contém.
 
 **Autor:** [Guilherme Pereira](https://github.com/Guilherme-Pereira-Ribeiro-da-silva/) 
 
-**Versão:** 1.0
+**Versão:** 1.0.1
 
 ##  Requerimentos
 Para utilizar este plugin, você também precisará 
@@ -14,7 +14,7 @@ instalar o plugin:
 
 ## Instalação
 
-Após haver cumprido os requerimentos, vá até a pasta de plugins
+Após haver cumprido os requerimentos, vá até pelo terminal até a pasta de plugins
 da sua aplicação wordpress e execute o comando:
 
 	git clone https://github.com/Guilherme-Pereira-Ribeiro-da-silva/taxonomy-and-urls.git
