@@ -36,6 +36,7 @@ function taxonomy_and_urls_activate()
     require_once dirname(__FILE__).'/taxonomy_and_urls_loader.php';
     $loader = new TaxonomyAndUrlsLoader();
     $loader->activate();
+    $wp_rewrite->set_permalink_structure('%postname%');
     $wp_rewrite->flush_rules(true);
 }
 

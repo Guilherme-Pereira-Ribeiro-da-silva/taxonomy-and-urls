@@ -94,10 +94,14 @@ class UrlsLoader extends Loader
         $current_url = home_url($wp->request);
         for ($i = 0;$i < count($this->taxonomies);$i++) {
             $suffix = $this->data[$i];
-            $terms = get_terms(array('taxonomy' => $this->taxonomies[$i]->taxonomy_name, 'hide_empty' => false));
+            //$terms = get_terms(array('taxonomy' => $this->taxonomies[$i]->taxonomy_name, 'hide_empty' => false));
             if (is_archive()) {
-                $this->_archives_redirect($i, $current_url, $suffix, $terms);
+                global $wp_query;
+                $tax = $wp_query->get_queried_object();
+
+                $this->_archives_redirect($i, $current_url, $suffix, $tax->name);
             } else if (is_single()) {
+                $terms = get_the_terms(get_the_ID(), $this->taxonomies[$i]->taxonomy_name);
                 if (has_term('', $this->taxonomies[$i]->taxonomy_name)) {
                     $this->_singles_with_taxonomy_redirect($wp->request, $current_url, $suffix, $terms);
                 } else {
@@ -115,15 +119,15 @@ class UrlsLoader extends Loader
      * @param int $i the current taxonomy index 
      * @param string $current_url the current url
      * @param array $suffix the url info
-     * @param array $terms the current taxonony taxonomy terms 
+     * @param array $terms the current taxonomy terms
      * 
      * @return void
      */
-    private function _archives_redirect($i, $current_url, $suffix, $terms) 
+    private function _archives_redirect($i, $current_url, $suffix, $term)
     {
         $archive_suffix_rule = "/".$this->taxonomies[$i]->taxonomy_name.'\/.*?\/?';
-        $archive_suffix_rule .= '('.implode('|', wp_list_pluck($terms, 'slug')).")\/?/";
-        $archive_suffix_rule_redirect = $this->_get_parent_taxonomies($terms[0]) 
+        $archive_suffix_rule .= "(".$term.")\/?/";
+        $archive_suffix_rule_redirect = $this->_get_parent_taxonomies($term)
         . $suffix->archive_permalink_suffix;
         //throw new \Exception($archive_suffix_rule_redirect);
         if (preg_match($archive_suffix_rule, $current_url)) {
