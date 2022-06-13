@@ -56,6 +56,12 @@ Já a tabela de urls é responsável por setar o sufixo o correspondente
 Por exemplo, um post com o termo sao-paulo(da taxonomia notícias)
 e com o sufixo noticias, será gerado na url: https://dominio/sao-paulo/noticias/nome-do-post
 
+## Rotas
+
+Para verificar a rota da api, por favor visite:
+
+[rotas wp regioes](https://www.postman.com/guilhermepereiraribeiro/workspace/api-wp-regioes)
+
 ## Diagramas
 
 ### Diagrama de classes
@@ -76,3 +82,14 @@ pode ser adicionada ou que algum código pode ser melhorado,
 não deixe de entrar em contato comigo pelo email guinovembro43@gmail.com.
 Eu estarei mais do que feliz em melhorar este sistema enquanto
 aprendo novas tecnologias!
+
+#### Uma mensagem ao time da seox:
+Muito obrigado por me introduzir a este novo desafio. Como eu já havia 
+dito, me encanta aprender coisas novas e sempre fazer melhor.
+Eu sei que provavelmente quando olharem o meu código, por serem mais
+experientes, provavelmente verão coisas passíveis de melhora. Independente
+de meu resultado final neste teste e de se eu serei contratado ou não,
+eu adoraria receber um feedback de onde posso melhorar e o que devo estudar. Pois de tal forma, posso sempre
+melhorar minhas habilidades e meu nível de código.
+
+**Muito obrigado pela oportunidade e espero logo fazer parte da equipe!**

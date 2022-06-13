@@ -98,8 +98,7 @@ class UrlsLoader extends Loader
             if (is_archive()) {
                 global $wp_query;
                 $tax = $wp_query->get_queried_object();
-
-                $this->_archives_redirect($i, $current_url, $suffix, $tax->name);
+                $this->_archives_redirect($i, $current_url, $suffix, $tax);
             } else if (is_single()) {
                 $terms = get_the_terms(get_the_ID(), $this->taxonomies[$i]->taxonomy_name);
                 if (has_term('', $this->taxonomies[$i]->taxonomy_name)) {
@@ -119,17 +118,16 @@ class UrlsLoader extends Loader
      * @param int $i the current taxonomy index 
      * @param string $current_url the current url
      * @param array $suffix the url info
-     * @param array $terms the current taxonomy terms
+     * @param array $tax the current taxonomy terms
      * 
      * @return void
      */
-    private function _archives_redirect($i, $current_url, $suffix, $term)
+    private function _archives_redirect($i, $current_url, $suffix, $tax)
     {
         $archive_suffix_rule = "/".$this->taxonomies[$i]->taxonomy_name.'\/.*?\/?';
-        $archive_suffix_rule .= "(".$term.")\/?/";
-        $archive_suffix_rule_redirect = $this->_get_parent_taxonomies($term)
+        $archive_suffix_rule .= "(".$tax->slug.")\/?/";
+        $archive_suffix_rule_redirect = $this->_get_parent_taxonomies($tax)
         . $suffix->archive_permalink_suffix;
-        //throw new \Exception($archive_suffix_rule_redirect);
         if (preg_match($archive_suffix_rule, $current_url)) {
             wp_redirect(home_url($archive_suffix_rule_redirect));
             die;
@@ -197,7 +195,7 @@ class UrlsLoader extends Loader
      * 
      * @return string
      */
-    private function _get_parent_taxonomies($term=null) 
+    private function _get_parent_taxonomies($term=null)
     {
         if (empty($term)) {
             return '';
@@ -208,6 +206,7 @@ class UrlsLoader extends Loader
             $term = get_term($term->parent);
             $path = "$term->slug/$path";
         }
+
         return $path;
     }
 }
