@@ -56,6 +56,20 @@ Já a tabela de urls é responsável por setar o sufixo o correspondente
 Por exemplo, um post com o termo sao-paulo(da taxonomia notícias)
 e com o sufixo noticias, será gerado na url: https://dominio/sao-paulo/noticias/nome-do-post
 
+## Diagramas
+
+### Diagrama de classes
+![diagrama-de-classes](https://github.com/Guilherme-Pereira-Ribeiro-da-silva/taxonomy-and-urls/blob/main/diagramas/diagrama_de_classes.png)
+
+O diagrama de classes acima especifíca as classes criadas 
+durante o projeto. De um lado temos os loaders das taxonomias e das urls, 
+que se relacionam com a classe geral de loaders por meio de
+uma relação de herança.
+
+Já por outro lado, temos as relações entre os models e os controllers. 
+Entre tais, a relação é de 1 para 1, uma vez que para cada model deve existir 
+um controller e vice versa.
+
 ## Observações do autor
 Se você descobriu algum bug, acha que alguma funcionalidade
 pode ser adicionada ou que algum código pode ser melhorado,
