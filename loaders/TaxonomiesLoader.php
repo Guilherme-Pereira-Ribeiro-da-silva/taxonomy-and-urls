@@ -59,8 +59,7 @@ class TaxonomiesLoader extends Loader
     {
         try{
             foreach ($this->data as $taxonomy) {
-                $params = $this->params["data"]["Taxonomy"];
-                $args = array( 
+                $args = array(
                     'hierarchical' => $taxonomy->is_hierarchical,
                     'label' => $taxonomy->label,
                     'show_ui'           => true,

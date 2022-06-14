@@ -15,10 +15,11 @@
     foreach($objects as $object): 
     ?>
         <tr>
-            <td> 
-                <?php 
+            <td>
+                <?php
+                $home_url = home_url();
                 $id = $taxonomies[$i]->id;
-                echo "<a href='http://localhost/seox/wp-admin/admin.php?page=mvc_taxonomies-edit&id=$id'>";
+                echo "<a href='$home_url/wp-admin/admin.php?page=mvc_taxonomies-edit&id=$id'>";
                 echo $taxonomies[$i]->taxonomy_name; 
                 echo "</a>";
                 ?>
@@ -26,7 +27,7 @@
             <td><?php echo $object->single_permalink_suffix ?></td>
             <td><?php echo $object->archive_permalink_suffix ?></td>
             <td>
-                <?php echo "<a href='http://localhost/seox/wp-admin/admin.php?page=mvc_urls-edit&id=$object->id'>Editar</a>" ?>
+                <?php echo "<a href='$home_url/wp-admin/admin.php?page=mvc_urls-edit&id=$object->id'>Editar</a>" ?>
             </td>
         </tr>
     <?php 
